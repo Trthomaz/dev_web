@@ -19,6 +19,9 @@ function TurmaDetalhesPage() {
   return (
     <div style={{ padding: 20 }}>
       <h1>Detalhes da Turma</h1>
+      {turma.codigo && (
+        <p><strong>Código:</strong> {turma.codigo}</p>
+      )}
       <p><strong>Ano:</strong> {turma.ano}</p>
       <p><strong>Período:</strong> {turma.periodo}</p>
       <p><strong>Disciplina:</strong> {turma.disciplinaNome}</p>

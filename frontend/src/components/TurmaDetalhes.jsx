@@ -15,6 +15,9 @@ export default function TurmaDetalhes() {
   return (
     <div>
       <h2>Detalhes da Turma</h2>
+      {turma.codigo && (
+        <p><strong>Código:</strong> {turma.codigo}</p>
+      )}
       <p><strong>Ano:</strong> {turma.ano}</p>
       <p><strong>Período:</strong> {turma.periodo}</p>
   <p><strong>Disciplina:</strong> {turma.disciplinaNome}</p>

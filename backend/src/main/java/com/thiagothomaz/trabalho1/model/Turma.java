@@ -14,6 +14,9 @@ public class Turma {
     private Integer ano;
     private Integer periodo;
 
+    @Column(unique = true)
+    private String codigo; // Ex.: A001, B002, etc.
+
     @ManyToOne
     @JoinColumn(name = "disciplina_id")
     private Disciplina disciplina;
@@ -53,6 +56,13 @@ public class Turma {
     }
     public void setPeriodo(Integer periodo) {
         this.periodo = periodo;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public Disciplina getDisciplina() {

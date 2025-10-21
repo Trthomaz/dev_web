@@ -6,8 +6,43 @@
   <component name="ChangeListManager">
     <list default="true" id="41903a44-0788-4397-9acb-914b377f8322" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/aluno/AlunoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/aluno/AlunoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/aluno/AlunoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/aluno/AlunoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/Trabalho1Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/Trabalho1Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/config/CorsConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/AlunoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/AlunoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/DisciplinaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/DisciplinaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/InscricaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/InscricaoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/ProfessorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/ProfessorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/TurmaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/TurmaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/aluno/AlunoRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/aluno/AlunoRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/aluno/AlunoResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/aluno/AlunoResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/disciplina/DisciplinaRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/disciplina/DisciplinaRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/disciplina/DisciplinaResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/disciplina/DisciplinaResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/inscricao/InscricaoRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/inscricao/InscricaoRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/inscricao/InscricaoResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/inscricao/InscricaoResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/professor/ProfessorRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/professor/ProfessorRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/professor/ProfessorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/professor/ProfessorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse$AlunoResumo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse$AlunoResumo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/exception/EntidadeNaoEncontradaException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/exception/EntidadeNaoEncontradaException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Aluno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Disciplina.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Disciplina.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Inscricao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Inscricao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Professor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Professor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Turma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Turma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/AlunoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/AlunoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/DisciplinaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/DisciplinaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/InscricaoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/InscricaoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/ProfessorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/ProfessorRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/TurmaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/TurmaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/AlunoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/AlunoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/DisciplinaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/DisciplinaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/InscricaoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/InscricaoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/ProfessorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/ProfessorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/TurmaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/TurmaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,36 +52,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="33lSQw1tlPK0qoclxWZv9sI9gB6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Trabalho1Application.executor": "Run",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/thiag/IdeaProjects/DevWeb/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Trabalho1Application.executor&quot;: &quot;Run&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/thiag/IdeaProjects/DevWeb/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Trabalho1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="trabalho1" />
@@ -72,6 +109,8 @@
       <option name="presentableId" value="Default" />
       <updated>1759890152425</updated>
       <workItem from="1759890154125" duration="651000" />
+      <workItem from="1760559319710" duration="809000" />
+      <workItem from="1760638149976" duration="1416000" />
     </task>
     <servers />
   </component>

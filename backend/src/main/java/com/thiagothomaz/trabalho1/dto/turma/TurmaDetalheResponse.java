@@ -6,17 +6,19 @@ public class TurmaDetalheResponse {
     private Long id;
     private Integer ano;
     private Integer periodo;
+    private String codigo;
     private String disciplinaNome;
     private String professorNome;
     private List<AlunoResumo> alunos;
 
     public TurmaDetalheResponse() {}
 
-    public TurmaDetalheResponse(Long id, Integer ano, Integer periodo, String disciplinaNome,
+    public TurmaDetalheResponse(Long id, Integer ano, Integer periodo, String codigo, String disciplinaNome,
                                 String professorNome, List<AlunoResumo> alunos) {
         this.id = id;
         this.ano = ano;
         this.periodo = periodo;
+        this.codigo = codigo;
         this.disciplinaNome = disciplinaNome;
         this.professorNome = professorNome;
         this.alunos = alunos;
@@ -44,6 +46,8 @@ public class TurmaDetalheResponse {
     public void setAno(Integer ano) { this.ano = ano; }
     public Integer getPeriodo() { return periodo; }
     public void setPeriodo(Integer periodo) { this.periodo = periodo; }
+    public String getCodigo() { return codigo; }
+    public void setCodigo(String codigo) { this.codigo = codigo; }
     public String getDisciplinaNome() { return disciplinaNome; }
     public void setDisciplinaNome(String disciplinaNome) { this.disciplinaNome = disciplinaNome; }
     public String getProfessorNome() { return professorNome; }

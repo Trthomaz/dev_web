@@ -1,17 +1,21 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 import AlunosPage from "./pages/AlunosPage";
 import TurmasPage from "./pages/TurmasPage";
 import TurmaDetalhesPage from "./pages/TurmaDetalhesPage";
+import BuscaTurmasPage from "./pages/BuscaTurmasPage";
 
 function App() {
   return (
     <Router>
       <nav style={{ padding: 10 }}>
+        <Link to="/buscar-turmas" style={{ marginRight: 10 }}>Buscar Turmas</Link>
         <Link to="/alunos" style={{ marginRight: 10 }}>Alunos</Link>
         <Link to="/turmas">Turmas</Link>
       </nav>
 
       <Routes>
+        <Route path="/" element={<Navigate to="/buscar-turmas" replace />} />
+        <Route path="/buscar-turmas" element={<BuscaTurmasPage />} />
         <Route path="/alunos" element={<AlunosPage />} />
         <Route path="/turmas" element={<TurmasPage />} />
         <Route path="/turmas/:id" element={<TurmaDetalhesPage />} />

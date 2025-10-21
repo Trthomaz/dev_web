@@ -32,6 +32,7 @@ public class TurmaService {
     Turma turma = new Turma();
     turma.setAno(resquest.getAno());
     turma.setPeriodo(resquest.getPeriodo());
+    turma.setCodigo(resquest.getCodigo());
     turma.setProfessor(professorRepository.findById(resquest.getProfessorId())
         .orElseThrow(() -> new EntidadeNaoEncontradaException("Professor não encontrado")));
     turma.setDisciplina(disciplinaRepository.findById(resquest.getDisciplinaId())
@@ -40,7 +41,7 @@ public class TurmaService {
     turma = turmaRepository.save(turma);
 
     return new TurmaResponse(
-        turma.getId(), turma.getAno(), turma.getPeriodo(),
+        turma.getId(), turma.getAno(), turma.getPeriodo(), turma.getCodigo(),
         turma.getDisciplina() != null ? turma.getDisciplina().getNome() : null,
         turma.getProfessor() != null ? turma.getProfessor().getNome() : null
     );
@@ -49,7 +50,7 @@ public class TurmaService {
     public List<TurmaResponse> listAll() {
     return turmaRepository.findAll().stream()
         .map(t -> new TurmaResponse(
-            t.getId(), t.getAno(), t.getPeriodo(),
+            t.getId(), t.getAno(), t.getPeriodo(), t.getCodigo(),
             t.getDisciplina() != null ? t.getDisciplina().getNome() : null,
             t.getProfessor() != null ? t.getProfessor().getNome() : null
         ))
@@ -67,7 +68,7 @@ public class TurmaService {
         .toList();
 
     return new TurmaDetalheResponse(
-        t.getId(), t.getAno(), t.getPeriodo(),
+        t.getId(), t.getAno(), t.getPeriodo(), t.getCodigo(),
         t.getDisciplina() != null ? t.getDisciplina().getNome() : null,
         t.getProfessor() != null ? t.getProfessor().getNome() : null,
         alunos

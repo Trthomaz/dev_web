@@ -16,6 +16,7 @@ export default function TurmaList() {
         {turmas.map((t) => (
           <li key={t.id}>
             <Link to={`/turmas/${t.id}`}>
+              {t.codigo ? `${t.codigo} — ` : ""}
               {t.ano}/{t.periodo} — {t.disciplinaNome} (Prof. {t.professorNome})
             </Link>
           </li>

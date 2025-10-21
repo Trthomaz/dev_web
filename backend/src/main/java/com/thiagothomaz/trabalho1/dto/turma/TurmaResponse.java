@@ -4,15 +4,17 @@ public class TurmaResponse {
     private Long id;
     private Integer ano;
     private Integer periodo;
+    private String codigo; // código/nome da turma (ex.: A001)
     private String disciplinaNome; // para exibir o nome da disciplina
     private String professorNome; // para exibir o nome do professor
 
     public TurmaResponse() {}
 
-    public TurmaResponse(Long id, Integer ano, Integer periodo, String disciplinaNome, String professorNome) {
+    public TurmaResponse(Long id, Integer ano, Integer periodo, String codigo, String disciplinaNome, String professorNome) {
         this.id = id;
         this.ano = ano;
         this.periodo = periodo;
+        this.codigo = codigo;
         this.disciplinaNome = disciplinaNome;
         this.professorNome = professorNome;
     }
@@ -25,6 +27,9 @@ public class TurmaResponse {
 
     public Integer getPeriodo() { return periodo; }
     public void setPeriodo(Integer periodo) { this.periodo = periodo; }
+
+    public String getCodigo() { return codigo; }
+    public void setCodigo(String codigo) { this.codigo = codigo; }
 
     public String getDisciplinaNome() { return disciplinaNome; }
     public void setDisciplinaNome(String disciplinaNome) { this.disciplinaNome = disciplinaNome; }
