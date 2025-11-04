@@ -1,6 +1,5 @@
 package com.thiagothomaz.trabalho1.service;
 
-import com.thiagothomaz.trabalho1.dto.aluno.AlunoResponse;
 import com.thiagothomaz.trabalho1.dto.professor.ProfessorRequest;
 import com.thiagothomaz.trabalho1.dto.professor.ProfessorResponse;
 import com.thiagothomaz.trabalho1.exception.EntidadeNaoEncontradaException;
@@ -9,7 +8,6 @@ import com.thiagothomaz.trabalho1.repository.ProfessorRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ProfessorService {

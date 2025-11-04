@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41903a44-0788-4397-9acb-914b377f8322" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/config/SeedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/config/SeedData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/service/ProfessorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/service/ProfessorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse$AlunoResumo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse$AlunoResumo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Turma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Turma.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/ProfessorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/ProfessorService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/TurmaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/TurmaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/BuscaTurmasPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/BuscaTurmasPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +89,9 @@
       <workItem from="1760559319710" duration="809000" />
       <workItem from="1760638149976" duration="1416000" />
       <workItem from="1761061737239" duration="612000" />
+      <workItem from="1761084391405" duration="514000" />
+      <workItem from="1761085382683" duration="397000" />
+      <workItem from="1762223068438" duration="697000" />
     </task>
     <servers />
   </component>

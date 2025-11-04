@@ -1,20 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
 import api from "../api/api";
 
-// Util: normaliza texto para comparação simples
 function normalize(str) {
   return (str || "").toString().toLowerCase();
 }
 
-// Constrói um rótulo curto para exibir na lista esquerda
 function turmaLabel(t) {
-  // Mostrar "código - disciplina" quando possível
   const cod = t.codigo?.trim();
   const disc = t.disciplinaNome?.trim();
   if (cod && disc) return `${cod} - ${disc}`;
   if (cod) return cod;
   if (disc) return disc;
-  // fallback para o id quando não vierem dados
   const idPad = String(t.id).padStart(3, "0");
   return `T${idPad}`;
 }
@@ -27,14 +23,13 @@ export default function BuscaTurmasPage() {
   const [selectedTurmaId, setSelectedTurmaId] = useState(null);
   const [turmaDetalhe, setTurmaDetalhe] = useState(null);
 
-  // Cache simples de alunos detalhados (para email)
-  const [alunoCache, setAlunoCache] = useState({}); // { [id]: { id, nome, email } }
+  const [alunoCache, setAlunoCache] = useState({});
 
   // Paginação
   const [page, setPage] = useState(1);
   const pageSize = 5;
 
-  // Carrega turmas apenas quando houver pesquisa (mantém vazio antes)
+  // Carrega turmas apenas quando houver pesquisa
   useEffect(() => {
     if (!carregouTurmas && query.trim().length > 0) {
       api
@@ -66,7 +61,6 @@ export default function BuscaTurmasPage() {
     });
   }, [allTurmas, query]);
 
-  // Ao selecionar turma
   useEffect(() => {
     if (!selectedTurmaId) return;
     setTurmaDetalhe(null);
@@ -85,7 +79,6 @@ export default function BuscaTurmasPage() {
     return turmaDetalhe?.alunos?.slice(pageStart, pageEnd) || [];
   }, [turmaDetalhe, pageStart, pageEnd]);
 
-  // Carrega emails dos alunos da página atual (se necessário)
   useEffect(() => {
     if (!alunosPagina.length) return;
     const faltando = alunosPagina.filter((a) => !alunoCache[a.id]).map((a) => a.id);
