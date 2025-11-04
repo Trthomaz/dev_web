@@ -21,11 +21,9 @@ public class SeedData {
             InscricaoRepository inscricaoRepository
     ) {
         return args -> {
-            inscricaoRepository.deleteAllInBatch();
-            turmaRepository.deleteAllInBatch();
-            alunoRepository.deleteAllInBatch();
-            professorRepository.deleteAllInBatch();
-            disciplinaRepository.deleteAllInBatch();
+            if (turmaRepository.count() > 0) {
+                return;
+            }
 
             Disciplina poa = new Disciplina("POA", 60);
             Disciplina poo = new Disciplina("POO", 60);
