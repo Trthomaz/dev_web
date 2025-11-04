@@ -8,14 +8,14 @@ import java.util.ArrayList;
 @Table(name = "turmas")
 public class Turma {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Integer ano;
     private Integer periodo;
 
     @Column(unique = true)
-    private String codigo; // Ex.: A001, B002, etc.
+    private String codigo;
 
     @ManyToOne
     @JoinColumn(name = "disciplina_id")

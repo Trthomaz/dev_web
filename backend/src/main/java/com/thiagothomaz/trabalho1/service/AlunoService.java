@@ -17,7 +17,6 @@ public class AlunoService {
         this.alunoRepository = alunoRepository;
     }
 
-    // Criar aluno
     public AlunoResponse save(AlunoRequest request) {
         Aluno aluno = new Aluno();
         aluno.setNome(request.getNome());
@@ -28,7 +27,6 @@ public class AlunoService {
         return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail());
     }
 
-    // Listar todos
     public List<AlunoResponse> listAll() {
         return alunoRepository.findAll()
                 .stream()
@@ -36,14 +34,12 @@ public class AlunoService {
                 .toList();
     }
 
-    // Buscar por id
     public AlunoResponse findById(Long id) {
         Aluno aluno = alunoRepository.findById(id)
                 .orElseThrow(() -> new EntidadeNaoEncontradaException("Aluno não encontrado"));
         return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail());
     }
 
-    // Atualizar
     public AlunoResponse update(Long id, AlunoRequest request) {
         Aluno aluno = alunoRepository.findById(id)
                 .orElseThrow(() -> new EntidadeNaoEncontradaException("Aluno não encontrado"));
@@ -54,7 +50,6 @@ public class AlunoService {
         return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail());
     }
 
-    // Deletar
     public void delete(Long id) {
         alunoRepository.deleteById(id);
     }

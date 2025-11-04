@@ -8,17 +8,17 @@ import java.time.LocalDateTime;
 public class Inscricao {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
     private LocalDateTime dataHora;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false) // várias inscrições para 1 aluno
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "aluno_id", nullable = false)
     private Aluno aluno;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false) // várias inscrições para 1 turma
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "turma_id", nullable = false)
     private Turma turma;
 
@@ -30,7 +30,6 @@ public class Inscricao {
         this.turma = turma;
     }
 
-    // getters e setters
     public Long getId() {
         return id;
     }

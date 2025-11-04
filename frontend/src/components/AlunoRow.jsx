@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import api from "../api/api";
 
-// Utilities to manage localStorage group per turma codigo
 function loadGrupo(codigo) {
   try {
     const raw = localStorage.getItem(codigo);
@@ -19,7 +18,6 @@ function saveGrupo(codigo, ids) {
 }
 
 export default function AlunoRow({ aluno, turmaCodigo }) {
-  // Email by aluno id via React Query
   const { data: alunoFull } = useQuery({
     queryKey: ["aluno", aluno.id],
     queryFn: async () => (await api.get(`/alunos/${aluno.id}`)).data,
@@ -44,7 +42,6 @@ export default function AlunoRow({ aluno, turmaCodigo }) {
     const set = new Set(ids);
     if (set.has(aluno.id)) set.delete(aluno.id); else set.add(aluno.id);
     saveGrupo(turmaCodigo, Array.from(set));
-    // Force a re-render by updating a state? parent won't know. We'll use dispatch event
     window.dispatchEvent(new CustomEvent("grupo-changed", { detail: { turmaCodigo } }));
   };
 

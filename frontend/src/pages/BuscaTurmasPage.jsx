@@ -25,11 +25,9 @@ export default function BuscaTurmasPage() {
 
   const [alunoCache, setAlunoCache] = useState({});
 
-  // Paginação
   const [page, setPage] = useState(1);
   const pageSize = 5;
 
-  // Carrega turmas apenas quando houver pesquisa
   useEffect(() => {
     if (!carregouTurmas && query.trim().length > 0) {
       api
@@ -42,7 +40,6 @@ export default function BuscaTurmasPage() {
     }
   }, [carregouTurmas, query]);
 
-  // Filtra turmas pelo texto (código, disciplina, professor, ano, período e id)
   const turmasFiltradas = useMemo(() => {
     const q = normalize(query);
     if (!q) return [];
@@ -99,7 +96,6 @@ export default function BuscaTurmasPage() {
     });
   }, [alunosPagina, alunoCache]);
 
-  // UI
   return (
     <div style={{ padding: 16 }}>
       <h2>Pesquisar Turmas</h2>
@@ -119,7 +115,6 @@ export default function BuscaTurmasPage() {
       </div>
 
       <div style={{ display: "flex", gap: 16 }}>
-        {/* Lista de turmas (esquerda) */}
         <div style={{ width: 280 }}>
           <h3>Turmas</h3>
           <div style={{
@@ -173,7 +168,6 @@ export default function BuscaTurmasPage() {
           </div>
         </div>
 
-        {/* Detalhes + Tabela de alunos (direita) */}
         <div style={{ flex: 1 }}>
           {selectedTurmaId && turmaDetalhe ? (
             <div>
@@ -215,7 +209,6 @@ export default function BuscaTurmasPage() {
                 </table>
               </div>
 
-              {/* Paginação */}
               {totalAlunos > 0 && (
                 <div style={{ display: "flex", gap: 8, marginTop: 12, alignItems: "center" }}>
                   <button

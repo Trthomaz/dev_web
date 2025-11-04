@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Table(name = "alunos")
 public class Aluno {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;

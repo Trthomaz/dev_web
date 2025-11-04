@@ -11,7 +11,6 @@ export default function AlunosTable({ turmaId, turmaCodigo }) {
     staleTime: 60 * 1000,
   });
 
-  // re-render when localStorage changes by our custom event
   const [, setBump] = useState(0);
   useEffect(() => {
     const handler = () => setBump((n) => n + 1);

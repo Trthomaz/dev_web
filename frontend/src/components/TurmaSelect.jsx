@@ -2,12 +2,6 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import api from "../api/api";
 
-/**
- * TurmaSelect
- * Props:
- * - value: selected turma id (number | null)
- * - onChange: (turma: {id:number, codigo?:string, disciplina?:{nome?:string}} | null) => void
- */
 export default function TurmaSelect({ value, onChange }) {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["turmas"],

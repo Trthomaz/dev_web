@@ -3,9 +3,9 @@ package com.thiagothomaz.trabalho1.dto.turma;
 public class TurmaRequest {
     private Integer ano;
     private Integer periodo;
-    private String codigo; // código/nome da turma (ex.: A001)
-    private Long professorId; // apenas o ID do professor
-    private Long disciplinaId; // apenas o ID da disciplina
+    private String codigo;
+    private Long professorId;
+    private Long disciplinaId;
 
     public TurmaRequest() {}
 

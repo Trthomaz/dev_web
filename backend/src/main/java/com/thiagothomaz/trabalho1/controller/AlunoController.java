@@ -18,32 +18,27 @@ public class AlunoController {
         this.alunoService = alunoService;
     }
 
-    // Criar aluno
     @PostMapping
     public ResponseEntity<AlunoResponse> save(@RequestBody AlunoRequest request) {
         AlunoResponse response = alunoService.save(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
-    // Listar todos alunos
     @GetMapping
     public List<AlunoResponse> listAll() {
         return alunoService.listAll();
     }
 
-    // Buscar aluno por id
     @GetMapping("/{id}")
     public AlunoResponse findById(@PathVariable Long id) {
         return alunoService.findById(id);
     }
 
-    // Atualizar aluno
     @PutMapping("/{id}")
     public AlunoResponse update(@PathVariable Long id, @RequestBody AlunoRequest request) {
         return alunoService.update(id, request);
     }
 
-    // Remover aluno
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         alunoService.delete(id);

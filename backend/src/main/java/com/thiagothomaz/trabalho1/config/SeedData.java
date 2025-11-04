@@ -21,27 +21,22 @@ public class SeedData {
             InscricaoRepository inscricaoRepository
     ) {
         return args -> {
-            // Limpa o banco para que o seed gere dados sempre do zero
-            // Ordem importa por causa de FKs: Inscricao -> Turma/Aluno; Turma -> Disciplina/Professor
             inscricaoRepository.deleteAllInBatch();
             turmaRepository.deleteAllInBatch();
             alunoRepository.deleteAllInBatch();
             professorRepository.deleteAllInBatch();
             disciplinaRepository.deleteAllInBatch();
 
-            // Disciplinas
             Disciplina poa = new Disciplina("POA", 60);
             Disciplina poo = new Disciplina("POO", 60);
             Disciplina bd = new Disciplina("Banco de Dados", 60);
             Disciplina compSoc = new Disciplina("Computação e Sociedade", 60);
             disciplinaRepository.saveAll(List.of(poa, poo, bd, compSoc));
 
-            // Professores
             Professor luis = new Professor("Luis", "luis@example.com");
             Professor ana = new Professor("Ana", "ana@example.com");
             professorRepository.saveAll(List.of(luis, ana));
 
-            // Alunos
             Aluno a1 = new Aluno("Alice", "alice@example.com");
             Aluno a2 = new Aluno("Bruno", "bruno@example.com");
             Aluno a3 = new Aluno("Carla", "carla@example.com");
@@ -50,7 +45,6 @@ public class SeedData {
             Aluno a6 = new Aluno("Felipe", "felipe@example.com");
             alunoRepository.saveAll(List.of(a1, a2, a3, a4, a5, a6));
 
-            // Turmas (ex.: A001, A002, A003, B001, B002, B003)
             Turma tA001 = new Turma();
             tA001.setAno(2025);
             tA001.setPeriodo(1);
@@ -93,7 +87,6 @@ public class SeedData {
             tB003.setDisciplina(poo);
             tB003.setProfessor(luis);
 
-            // Turma extra para exemplos
             Turma tC001 = new Turma();
             tC001.setAno(2025);
             tC001.setPeriodo(1);
@@ -103,41 +96,27 @@ public class SeedData {
 
             turmaRepository.saveAll(List.of(tA001, tA002, tA003, tB001, tB002, tB003, tC001));
 
-        // Inscrições para todas as turmas (datas espaçadas apenas para variar)
         inscricaoRepository.saveAll(List.of(
-            // A001
             new Inscricao(LocalDateTime.now().minusDays(20), a1, tA001),
             new Inscricao(LocalDateTime.now().minusDays(19), a2, tA001),
             new Inscricao(LocalDateTime.now().minusDays(18), a3, tA001),
-
-            // A002
             new Inscricao(LocalDateTime.now().minusDays(17), a1, tA002),
             new Inscricao(LocalDateTime.now().minusDays(16), a2, tA002),
             new Inscricao(LocalDateTime.now().minusDays(15), a3, tA002),
             new Inscricao(LocalDateTime.now().minusDays(14), a4, tA002),
             new Inscricao(LocalDateTime.now().minusDays(13), a5, tA002),
             new Inscricao(LocalDateTime.now().minusDays(12), a6, tA002),
-
-            // A003
             new Inscricao(LocalDateTime.now().minusDays(11), a2, tA003),
             new Inscricao(LocalDateTime.now().minusDays(10), a4, tA003),
             new Inscricao(LocalDateTime.now().minusDays(9), a6, tA003),
-
-            // B001
             new Inscricao(LocalDateTime.now().minusDays(8), a3, tB001),
             new Inscricao(LocalDateTime.now().minusDays(7), a5, tB001),
-
-            // B002
             new Inscricao(LocalDateTime.now().minusDays(6), a1, tB002),
             new Inscricao(LocalDateTime.now().minusDays(5), a4, tB002),
             new Inscricao(LocalDateTime.now().minusDays(4), a5, tB002),
-
-            // B003
             new Inscricao(LocalDateTime.now().minusDays(3), a2, tB003),
             new Inscricao(LocalDateTime.now().minusDays(2), a3, tB003),
             new Inscricao(LocalDateTime.now().minusDays(1), a6, tB003),
-
-            // C001
             new Inscricao(LocalDateTime.now().minusHours(12), a1, tC001),
             new Inscricao(LocalDateTime.now().minusHours(6), a3, tC001),
             new Inscricao(LocalDateTime.now().minusHours(3), a5, tC001),

@@ -4,9 +4,9 @@ public class TurmaResponse {
     private Long id;
     private Integer ano;
     private Integer periodo;
-    private String codigo; // código/nome da turma (ex.: A001)
-    private String disciplinaNome; // para exibir o nome da disciplina
-    private String professorNome; // para exibir o nome do professor
+    private String codigo;
+    private String disciplinaNome;
+    private String professorNome;
 
     public TurmaResponse() {}
 
