@@ -53,4 +53,11 @@ public class AlunoService {
     public void delete(Long id) {
         alunoRepository.deleteById(id);
     }
+
+    public List<AlunoResponse> listNotEnrolledInTurma(Long turmaId) {
+        return alunoRepository.findNotEnrolledInTurma(turmaId)
+                .stream()
+                .map(a -> new AlunoResponse(a.getId(), a.getNome(), a.getEmail()))
+                .toList();
+    }
 }

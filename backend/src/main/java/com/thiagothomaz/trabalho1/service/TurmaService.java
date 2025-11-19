@@ -57,15 +57,25 @@ public class TurmaService {
         .toList();
     }
 
+    public List<TurmaResponse> listByDisciplina(Long disciplinaId) {
+    return turmaRepository.findByDisciplina(disciplinaId).stream()
+        .map(t -> new TurmaResponse(
+            t.getId(), t.getAno(), t.getPeriodo(), t.getCodigo(),
+            t.getDisciplina() != null ? t.getDisciplina().getNome() : null,
+            t.getProfessor() != null ? t.getProfessor().getNome() : null
+        ))
+        .toList();
+    }
+
     @Transactional(readOnly = true)
     public TurmaDetalheResponse findById(Long id) {
     Turma t = turmaRepository.findById(id)
         .orElseThrow(() -> new EntidadeNaoEncontradaException("Turma não encontrada"));
 
-    List<TurmaDetalheResponse.AlunoResumo> alunos = t.getInscricoes().stream()
-        .map(Inscricao::getAluno)
-        .map(a -> new TurmaDetalheResponse.AlunoResumo(a.getId(), a.getNome()))
-        .toList();
+            List<TurmaDetalheResponse.AlunoResumo> alunos = t.getInscricoes().stream()
+                .sorted((i1, i2) -> i2.getId().compareTo(i1.getId())) // ordenar por id da inscrição (mais recente primeiro)
+                .map(i -> new TurmaDetalheResponse.AlunoResumo(i.getAluno().getId(), i.getAluno().getNome()))
+                .toList();
 
     return new TurmaDetalheResponse(
         t.getId(), t.getAno(), t.getPeriodo(), t.getCodigo(),

@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import api from "../api/api";
 
 function TurmaDetalhesPage() {
   const { id } = useParams();
-  const [turma, setTurma] = useState(null);
+  const { data: turma, isLoading, isError, error } = useQuery({
+    queryKey: ["turma", { id }],
+    queryFn: async () => (await api.get(`/turmas/${id}`)).data,
+  });
 
-  useEffect(() => {
-    api.get(`/turmas/${id}`)
-      .then(response => setTurma(response.data))
-      .catch(error => console.error("Erro ao carregar detalhes da turma:", error));
-  }, [id]);
-
-  if (!turma) {
-    return <div>Carregando...</div>;
-  }
+  if (isLoading) return <div>Carregando...</div>;
+  if (isError) return <div style={{color:'red'}}>Erro: {String(error?.message || 'Falha ao carregar')}</div>;
 
   return (
     <div style={{ padding: 20 }}>

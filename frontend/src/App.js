@@ -4,6 +4,9 @@ import TurmasPage from "./pages/TurmasPage";
 import TurmaDetalhesPage from "./pages/TurmaDetalhesPage";
 import BuscaTurmasPage from "./pages/BuscaTurmasPage";
 import GrupoAlunosPage from "./pages/GrupoAlunosPage";
+import CadastroDeAlunosPage from "./pages/CadastroDeAlunosPage";
+import AlunoPage from "./pages/AlunoPage";
+import InscricaoFlowPage from "./pages/InscricaoFlowPage";
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
         <Link to="/alunos" style={{ marginRight: 10 }}>Alunos</Link>
         <Link to="/turmas" style={{ marginRight: 10 }}>Turmas</Link>
         <Link to="/grupos">Grupos</Link>
+        <span style={{ margin: '0 10px' }} />
+        <Link to="/cadastro-alunos" style={{ marginRight: 10 }}>Cadastro Alunos</Link>
+        <Link to="/inscricoes">Inscrições</Link>
       </nav>
 
       <Routes>
@@ -22,6 +28,9 @@ function App() {
         <Route path="/turmas" element={<TurmasPage />} />
         <Route path="/turmas/:id" element={<TurmaDetalhesPage />} />
         <Route path="/grupos" element={<GrupoAlunosPage />} />
+        <Route path="/cadastro-alunos" element={<CadastroDeAlunosPage />} />
+        <Route path="/aluno/:id" element={<AlunoPage />} />
+        <Route path="/inscricoes" element={<InscricaoFlowPage />} />
       </Routes>
     </Router>
   );
