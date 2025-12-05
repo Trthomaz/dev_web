@@ -19,7 +19,7 @@ public class AlunoController {
     }
 
     @PostMapping
-    public ResponseEntity<AlunoResponse> save(@RequestBody AlunoRequest request) {
+    public ResponseEntity<AlunoResponse> save(@RequestBody @jakarta.validation.Valid AlunoRequest request) {
         AlunoResponse response = alunoService.save(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
@@ -35,7 +35,7 @@ public class AlunoController {
     }
 
     @PutMapping("/{id}")
-    public AlunoResponse update(@PathVariable Long id, @RequestBody AlunoRequest request) {
+    public AlunoResponse update(@PathVariable Long id, @RequestBody @jakarta.validation.Valid AlunoRequest request) {
         return alunoService.update(id, request);
     }
 

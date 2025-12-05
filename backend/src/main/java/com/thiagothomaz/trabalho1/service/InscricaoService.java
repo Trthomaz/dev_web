@@ -39,4 +39,10 @@ public class InscricaoService {
     public void delete(Long id) {
         inscricaoRepository.deleteById(id);
     }
+
+    public void deleteByTurmaAndAluno(Long turmaId, Long alunoId) {
+        Inscricao i = inscricaoRepository.findByTurma_IdAndAluno_Id(turmaId, alunoId)
+                .orElseThrow(() -> new EntidadeNaoEncontradaException("Inscrição não encontrada"));
+        inscricaoRepository.delete(i);
+    }
 }

@@ -15,6 +15,9 @@ public class Aluno {
     private String nome;
     private String email;
 
+    @Column(unique = true)
+    private String cpf;
+
     @OneToMany(mappedBy = "aluno", cascade = CascadeType.ALL)
     private List<Inscricao> inscricoes = new ArrayList<>();
 
@@ -46,6 +49,9 @@ public class Aluno {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getCpf() { return cpf; }
+    public void setCpf(String cpf) { this.cpf = cpf; }
 
     public List<Inscricao> getInscricoes() {
         return inscricoes;

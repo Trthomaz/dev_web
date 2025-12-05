@@ -4,7 +4,6 @@ import com.thiagothomaz.trabalho1.dto.turma.TurmaDetalheResponse;
 import com.thiagothomaz.trabalho1.dto.turma.TurmaRequest;
 import com.thiagothomaz.trabalho1.dto.turma.TurmaResponse;
 import com.thiagothomaz.trabalho1.exception.EntidadeNaoEncontradaException;
-import com.thiagothomaz.trabalho1.model.Inscricao;
 import com.thiagothomaz.trabalho1.model.Turma;
 import com.thiagothomaz.trabalho1.repository.DisciplinaRepository;
 import com.thiagothomaz.trabalho1.repository.ProfessorRepository;
@@ -72,9 +71,14 @@ public class TurmaService {
     Turma t = turmaRepository.findById(id)
         .orElseThrow(() -> new EntidadeNaoEncontradaException("Turma não encontrada"));
 
-            List<TurmaDetalheResponse.AlunoResumo> alunos = t.getInscricoes().stream()
-                .sorted((i1, i2) -> i2.getId().compareTo(i1.getId())) // ordenar por id da inscrição (mais recente primeiro)
-                .map(i -> new TurmaDetalheResponse.AlunoResumo(i.getAluno().getId(), i.getAluno().getNome()))
+                List<TurmaDetalheResponse.AlunoResumo> alunos = t.getInscricoes().stream()
+                .sorted((i1, i2) -> i2.getId().compareTo(i1.getId()))
+                .map(i -> new TurmaDetalheResponse.AlunoResumo(
+                    i.getAluno().getId(),
+                    i.getAluno().getNome(),
+                    i.getAluno().getCpf(),
+                    i.getId()
+                ))
                 .toList();
 
     return new TurmaDetalheResponse(

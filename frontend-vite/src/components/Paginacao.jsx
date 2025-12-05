@@ -1,13 +1,14 @@
 import React from 'react';
 import { useInscricaoStore } from '../store';
 import { useQuery } from '@tanstack/react-query';
-import { api } from '../api';
+import { useApi } from '../hooks/useApi';
 
 export function Paginacao() {
   const { turmaId, page, pageSize, setPage, filtro } = useInscricaoStore();
+  const { get } = useApi();
   const { data } = useQuery({
     queryKey: ['turma', { turmaId }],
-    queryFn: async () => (await api.get(`/turmas/${turmaId}`)).data,
+    queryFn: get(`/turmas/${turmaId}`),
     enabled: !!turmaId,
   });
   if (!turmaId) return null;

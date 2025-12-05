@@ -1,11 +1,12 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { api } from '../api';
+import { useApi } from '../hooks/useApi';
 import { useInscricaoStore } from '../store';
 
 export function DisciplinaComboBox() {
   const { disciplinaId, setDisciplina } = useInscricaoStore();
-  const { data } = useQuery({ queryKey: ['disciplinas'], queryFn: async () => (await api.get('/disciplinas')).data });
+  const { get } = useApi();
+  const { data } = useQuery({ queryKey: ['disciplinas'], queryFn: get('/disciplinas') });
   return (
     <div>
       <label>Disciplina</label><br />

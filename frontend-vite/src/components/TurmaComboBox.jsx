@@ -1,13 +1,14 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { api } from '../api';
+import { useApi } from '../hooks/useApi';
 import { useInscricaoStore } from '../store';
 
 export function TurmaComboBox() {
   const { disciplinaId, turmaId, setTurma } = useInscricaoStore();
+  const { get } = useApi();
   const { data } = useQuery({
     queryKey: ['turmas', { disciplinaId }],
-    queryFn: async () => (await api.get(`/disciplinas/${disciplinaId}/turmas`)).data,
+    queryFn: get(`/disciplinas/${disciplinaId}/turmas`),
     enabled: !!disciplinaId,
   });
   return (

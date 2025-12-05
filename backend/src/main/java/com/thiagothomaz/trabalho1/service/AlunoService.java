@@ -21,23 +21,24 @@ public class AlunoService {
         Aluno aluno = new Aluno();
         aluno.setNome(request.getNome());
         aluno.setEmail(request.getEmail());
+        aluno.setCpf(request.getCpf());
 
         aluno = alunoRepository.save(aluno);
 
-        return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail());
+        return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail(), aluno.getCpf());
     }
 
     public List<AlunoResponse> listAll() {
         return alunoRepository.findAll()
                 .stream()
-                .map(a -> new AlunoResponse(a.getId(), a.getNome(), a.getEmail()))
+            .map(a -> new AlunoResponse(a.getId(), a.getNome(), a.getEmail(), a.getCpf()))
                 .toList();
     }
 
     public AlunoResponse findById(Long id) {
         Aluno aluno = alunoRepository.findById(id)
                 .orElseThrow(() -> new EntidadeNaoEncontradaException("Aluno não encontrado"));
-        return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail());
+        return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail(), aluno.getCpf());
     }
 
     public AlunoResponse update(Long id, AlunoRequest request) {
@@ -45,9 +46,10 @@ public class AlunoService {
                 .orElseThrow(() -> new EntidadeNaoEncontradaException("Aluno não encontrado"));
         aluno.setNome(request.getNome());
         aluno.setEmail(request.getEmail());
+        aluno.setCpf(request.getCpf());
 
         aluno = alunoRepository.save(aluno);
-        return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail());
+        return new AlunoResponse(aluno.getId(), aluno.getNome(), aluno.getEmail(), aluno.getCpf());
     }
 
     public void delete(Long id) {
@@ -57,7 +59,7 @@ public class AlunoService {
     public List<AlunoResponse> listNotEnrolledInTurma(Long turmaId) {
         return alunoRepository.findNotEnrolledInTurma(turmaId)
                 .stream()
-                .map(a -> new AlunoResponse(a.getId(), a.getNome(), a.getEmail()))
+            .map(a -> new AlunoResponse(a.getId(), a.getNome(), a.getEmail(), a.getCpf()))
                 .toList();
     }
 }

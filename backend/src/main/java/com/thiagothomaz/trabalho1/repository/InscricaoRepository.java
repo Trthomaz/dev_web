@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface InscricaoRepository extends JpaRepository<Inscricao, Long>{
+	java.util.Optional<Inscricao> findByTurma_IdAndAluno_Id(Long turmaId, Long alunoId);
 }

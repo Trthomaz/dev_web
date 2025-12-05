@@ -4,13 +4,15 @@ public class AlunoResponse {
     private Long id;
     private String nome;
     private String email;
+    private String cpf;
 
     public AlunoResponse() {}
 
-    public AlunoResponse(Long id, String nome, String email) {
+    public AlunoResponse(Long id, String nome, String email, String cpf) {
         this.id = id;
         this.nome = nome;
         this.email = email;
+        this.cpf = cpf;
     }
 
     public Long getId() { return id; }
@@ -19,4 +21,6 @@ public class AlunoResponse {
     public void setNome(String nome) { this.nome = nome; }
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+    public String getCpf() { return cpf; }
+    public void setCpf(String cpf) { this.cpf = cpf; }
 }

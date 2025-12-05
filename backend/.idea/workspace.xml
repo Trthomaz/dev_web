@@ -6,32 +6,51 @@
   <component name="ChangeListManager">
     <list default="true" id="41903a44-0788-4397-9acb-914b377f8322" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/controller/DisciplinaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/controller/DisciplinaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/controller/TurmaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/controller/TurmaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/repository/AlunoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/repository/AlunoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/repository/TurmaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/repository/TurmaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/config/SeedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/config/SeedData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/controller/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/controller/AlunoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/controller/InscricaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/controller/InscricaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/aluno/AlunoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/aluno/AlunoRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/aluno/AlunoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/aluno/AlunoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/model/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/model/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/repository/InscricaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/repository/InscricaoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/service/AlunoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/service/AlunoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/service/InscricaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/service/InscricaoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/service/TurmaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thiagothomaz/trabalho1/service/TurmaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/config/CorsConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/AlunoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/AlunoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/DisciplinaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/DisciplinaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/InscricaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/InscricaoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/TurmaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/controller/TurmaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/aluno/AlunoRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/aluno/AlunoRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/aluno/AlunoResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/aluno/AlunoResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse$AlunoResumo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse$AlunoResumo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/dto/turma/TurmaDetalheResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/exception/GlobalExceptionHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Aluno.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Inscricao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Inscricao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Turma.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/model/Turma.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/AlunoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/AlunoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/InscricaoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/InscricaoRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/TurmaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/repository/TurmaRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/AlunoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/AlunoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/ProfessorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/ProfessorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/InscricaoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/InscricaoService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/TurmaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thiagothomaz/trabalho1/service/TurmaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/AlunosPage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/TurmaDetalhesPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/TurmaDetalhesPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/TurmasPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/TurmasPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/components/AlunoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/components/AlunoForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/components/DisciplinaComboBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/components/DisciplinaComboBox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/components/InscricaoForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/components/InscricaoForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/components/Paginacao.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/components/Paginacao.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/components/TabelaDeAlunosPorTurma.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/components/TabelaDeAlunosPorTurma.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/components/TurmaComboBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/components/TurmaComboBox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/pages/AlunoPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/pages/AlunoPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/pages/CadastroDeAlunosPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/pages/CadastroDeAlunosPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/pages/InscricaoFlowPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/pages/InscricaoFlowPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-vite/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-vite/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +126,9 @@
       <workItem from="1762223068438" duration="5842000" />
       <workItem from="1763587669528" duration="636000" />
       <workItem from="1763588510641" duration="2186000" />
+      <workItem from="1764795977928" duration="6970000" />
+      <workItem from="1764896933633" duration="32000" />
+      <workItem from="1764897002082" duration="2473000" />
     </task>
     <servers />
   </component>

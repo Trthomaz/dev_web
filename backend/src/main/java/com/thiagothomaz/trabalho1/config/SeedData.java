@@ -18,9 +18,29 @@ public class SeedData {
             ProfessorRepository professorRepository,
             AlunoRepository alunoRepository,
             TurmaRepository turmaRepository,
-            InscricaoRepository inscricaoRepository
+            InscricaoRepository inscricaoRepository,
+            UserRepository userRepository,
+            org.springframework.security.crypto.password.PasswordEncoder passwordEncoder
     ) {
         return args -> {
+            // Sempre garante um usuário ADMIN (username: admin, senha: password)
+            if (!userRepository.existsByUsername("admin")) {
+                var admin = new AppUser("admin", passwordEncoder.encode("password"), java.util.Set.of(UserRole.ADMIN));
+                userRepository.save(admin);
+            }
+
+            // Garante que haja ao menos alguns alunos na tabela
+            if (alunoRepository.count() == 0) {
+                Aluno a1 = new Aluno("Aluno1", "aluno1@example.com");
+                a1.setCpf("00000000001");
+                Aluno a2 = new Aluno("Aluno2", "aluno2@example.com");
+                a2.setCpf("00000000002");
+                Aluno a3 = new Aluno("Aluno3", "aluno3@example.com");
+                a3.setCpf("00000000003");
+                alunoRepository.saveAll(java.util.List.of(a1, a2, a3));
+            }
+
+            // Se ainda não há turmas/disciplina/professores/inscrições, popular tudo
             if (turmaRepository.count() > 0) {
                 return;
             }
@@ -36,11 +56,17 @@ public class SeedData {
             professorRepository.saveAll(List.of(luis, ana));
 
             Aluno a1 = new Aluno("Alice", "alice@example.com");
+            a1.setCpf("11111111111");
             Aluno a2 = new Aluno("Bruno", "bruno@example.com");
+            a2.setCpf("22222222222");
             Aluno a3 = new Aluno("Carla", "carla@example.com");
+            a3.setCpf("33333333333");
             Aluno a4 = new Aluno("Diego", "diego@example.com");
+            a4.setCpf("44444444444");
             Aluno a5 = new Aluno("Eva", "eva@example.com");
+            a5.setCpf("55555555555");
             Aluno a6 = new Aluno("Felipe", "felipe@example.com");
+            a6.setCpf("66666666666");
             alunoRepository.saveAll(List.of(a1, a2, a3, a4, a5, a6));
 
             Turma tA001 = new Turma();
@@ -120,6 +146,7 @@ public class SeedData {
             new Inscricao(LocalDateTime.now().minusHours(3), a5, tC001),
             new Inscricao(LocalDateTime.now(), a6, tC001)
         ));
+
         };
     }
 }

@@ -27,17 +27,25 @@ public class TurmaDetalheResponse {
     public static class AlunoResumo {
         private Long id;
         private String nome;
+        private String cpf;
+        private Long inscricaoId;
 
         public AlunoResumo() {}
-        public AlunoResumo(Long id, String nome) {
+        public AlunoResumo(Long id, String nome, String cpf, Long inscricaoId) {
             this.id = id;
             this.nome = nome;
+            this.cpf = cpf;
+            this.inscricaoId = inscricaoId;
         }
 
         public Long getId() { return id; }
         public void setId(Long id) { this.id = id; }
         public String getNome() { return nome; }
         public void setNome(String nome) { this.nome = nome; }
+        public String getCpf() { return cpf; }
+        public void setCpf(String cpf) { this.cpf = cpf; }
+        public Long getInscricaoId() { return inscricaoId; }
+        public void setInscricaoId(Long inscricaoId) { this.inscricaoId = inscricaoId; }
     }
 
     public Long getId() { return id; }

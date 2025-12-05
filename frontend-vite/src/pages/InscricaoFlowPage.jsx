@@ -6,12 +6,18 @@ import { Paginacao } from '../components/Paginacao';
 
 export function InscricaoFlowPage() {
   return (
-    <div style={{ padding: 16, display: 'grid', gap: 16 }}>
-      <h2>Inscrições</h2>
-      <InscricaoForm />
-      <Pesquisa />
-      <TabelaDeAlunosPorTurma />
-      <Paginacao />
+    <div className='container'>
+      <div className='grid'>
+        <div className='card'>
+          <h2 className='title'>Inscrições</h2>
+          <InscricaoForm />
+        </div>
+        <div className='card'>
+          <Pesquisa />
+          <TabelaDeAlunosPorTurma />
+          <Paginacao />
+        </div>
+      </div>
     </div>
   );
 }

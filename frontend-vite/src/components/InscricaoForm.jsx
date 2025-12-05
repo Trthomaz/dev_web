@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { api } from '../api';
+import { useApi } from '../hooks/useApi';
 import { useInscricaoStore } from '../store';
 import { DisciplinaComboBox } from './DisciplinaComboBox';
 import { TurmaComboBox } from './TurmaComboBox';
@@ -9,8 +9,9 @@ import { AlunoComboBox } from './AlunoComboBox';
 export function InscricaoForm() {
   const { disciplinaId, turmaId, alunoId, resetAfterEnroll } = useInscricaoStore();
   const qc = useQueryClient();
+  const { post } = useApi();
   const mutation = useMutation({
-    mutationFn: async () => (await api.post('/inscricoes', { alunoId, turmaId })).data,
+    mutationFn: async () => await post('/inscricoes')({ alunoId, turmaId }),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['turma', { turmaId }] });
       qc.invalidateQueries({ queryKey: ['alunos-nao-inscritos', { turmaId }] });

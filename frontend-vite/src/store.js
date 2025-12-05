@@ -1,4 +1,20 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+
+export const useAuthStore = create(
+  persist(
+    (set) => ({
+      token: null,
+      username: null,
+      role: null,
+      authMessage: null,
+      setAuth: ({ token, username, role }) => set({ token, username, role, authMessage: null }),
+      setAuthMessage: (authMessage) => set({ authMessage }),
+      clearAuth: () => set({ token: null, username: null, role: null, authMessage: null }),
+    }),
+    { name: 'auth' }
+  )
+);
 
 export const useInscricaoStore = create((set) => ({
   disciplinaId: null,
