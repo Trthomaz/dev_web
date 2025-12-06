@@ -18,21 +18,27 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public AppUser signup(String username, String rawPassword) {
+    public AppUser signup(String username, String email, String rawPassword) {
         if (userRepository.existsByUsername(username)) {
             throw new IllegalArgumentException("Usuário já existe");
         }
+        if (userRepository.existsByEmail(email)) {
+            throw new IllegalArgumentException("Email já existe");
+        }
         String hashed = passwordEncoder.encode(rawPassword);
-        AppUser user = new AppUser(username, hashed, Set.of(UserRole.USER));
+        AppUser user = new AppUser(username, email, hashed, Set.of(UserRole.USER));
         return userRepository.save(user);
     }
 
-    public AppUser createByAdmin(String username, String rawPassword, UserRole role) {
+    public AppUser createByAdmin(String username, String email, String rawPassword, UserRole role) {
         if (userRepository.existsByUsername(username)) {
             throw new IllegalArgumentException("Usuário já existe");
         }
+        if (userRepository.existsByEmail(email)) {
+            throw new IllegalArgumentException("Email já existe");
+        }
         String hashed = passwordEncoder.encode(rawPassword);
-        AppUser user = new AppUser(username, hashed, Set.of(role));
+        AppUser user = new AppUser(username, email, hashed, Set.of(role));
         return userRepository.save(user);
     }
 }

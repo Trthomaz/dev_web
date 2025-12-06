@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const schema = z.object({
   username: z.string().min(3, 'Usuário mínimo 3 caracteres'),
+  email: z.string().email('Email inválido'),
   password: z.string().min(3, 'Senha mínima 3 caracteres'),
 });
 
@@ -46,6 +47,11 @@ export function SignupPage() {
             <label>Usuário</label>
             <input {...register('username')} />
             {errors.username && <span className='error'>{errors.username.message}</span>}
+          </div>
+          <div>
+            <label>Email</label>
+            <input type='email' {...register('email')} />
+            {errors.email && <span className='error'>{errors.email.message}</span>}
           </div>
           <div>
             <label>Senha</label>

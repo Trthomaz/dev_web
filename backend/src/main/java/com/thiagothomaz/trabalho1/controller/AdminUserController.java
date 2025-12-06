@@ -19,12 +19,12 @@ public class AdminUserController {
         this.userService = userService;
     }
 
-    public record CreateUserRequest(String username, String password, String role){}
+    public record CreateUserRequest(String username, String email, String password, String role){}
 
     @PostMapping
     public ResponseEntity<Map<String, Object>> create(@RequestBody CreateUserRequest req) {
         UserRole role = "ADMIN".equalsIgnoreCase(req.role()) ? UserRole.ADMIN : UserRole.USER;
-        AppUser user = userService.createByAdmin(req.username(), req.password(), role);
+        AppUser user = userService.createByAdmin(req.username(), req.email(), req.password(), role);
         Map<String, Object> body = new HashMap<>();
         body.put("id", user.getId());
         body.put("username", user.getUsername());

@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route, Link, Navigate, useNavigate } from 'react-router-dom';
 import { CadastroDeAlunosPage } from './pages/CadastroDeAlunosPage';
 import { AlunoPage } from './pages/AlunoPage';
+import { AlunosListPage } from './pages/AlunosListPage';
 import { InscricaoFlowPage } from './pages/InscricaoFlowPage';
 import { LoginPage } from './pages/LoginPage';
 import { SignupPage } from './pages/SignupPage';
@@ -20,6 +21,7 @@ export function App() {
         <nav className='nav'>
           <>
             <Link to='/cadastro-alunos'>Cadastro Alunos</Link>
+            <Link to='/alunos'>Alunos</Link>
             <Link to='/inscricoes'>Inscrições</Link>
             {role === 'ROLE_ADMIN' && <Link to='/admin/users'>Gerenciar Usuários</Link>}
           </>
@@ -39,6 +41,7 @@ export function App() {
         <Routes>
           <Route path='/' element={<Navigate to='/cadastro-alunos' replace />} />
           <Route path='/cadastro-alunos' element={<CadastroDeAlunosPage />} />
+          <Route path='/alunos' element={<AlunosListPage />} />
           <Route path='/aluno/:id' element={<ProtectedRoute><AlunoPage /></ProtectedRoute>} />
           <Route path='/inscricoes' element={<InscricaoFlowPage />} />
           <Route path='/login' element={<LoginPage />} />

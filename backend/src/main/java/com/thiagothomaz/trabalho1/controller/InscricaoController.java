@@ -23,10 +23,4 @@ public class InscricaoController {
     public void delete(@PathVariable Long id){
         inscricaoService.delete(id);
     }
-
-    // Fallback: permite remover informando turma e aluno quando o ID da inscrição não estiver disponível
-    @DeleteMapping(params = {"turmaId", "alunoId"})
-    public void deleteByTurmaAluno(@RequestParam Long turmaId, @RequestParam Long alunoId) {
-        inscricaoService.deleteByTurmaAndAluno(turmaId, alunoId);
-    }
 }

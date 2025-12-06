@@ -26,13 +26,13 @@ public class AuthController {
         this.userService = userService;
     }
 
-    public record AuthRequest(String username, String password) {}
+    public record AuthRequest(String username, String email, String password) {}
+    public record SignupRequest(String username, String email, String password) {}
     public record AuthResponse(String token, String username, String role) {}
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest req) {
-        Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(req.username(),
-                req.password()));
+        Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(req.username(), req.password()));
         String username = auth.getName();
         String role = auth.getAuthorities().stream().findFirst().map(a -> a.getAuthority()).orElse("ROLE_USER");
         Map<String, Object> claims = new HashMap<>();
@@ -42,8 +42,8 @@ public class AuthController {
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<Map<String, Object>> signup(@RequestBody AuthRequest req) {
-        AppUser user = userService.signup(req.username(), req.password());
+    public ResponseEntity<Map<String, Object>> signup(@RequestBody SignupRequest req) {
+        AppUser user = userService.signup(req.username(), req.email(), req.password());
         Map<String, Object> body = new HashMap<>();
         body.put("id", user.getId());
         body.put("username", user.getUsername());

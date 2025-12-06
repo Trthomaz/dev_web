@@ -23,21 +23,18 @@ public class SeedData {
             org.springframework.security.crypto.password.PasswordEncoder passwordEncoder
     ) {
         return args -> {
-            // Sempre garante um usuário ADMIN (username: admin, senha: password)
-            if (!userRepository.existsByUsername("admin")) {
-                var admin = new AppUser("admin", passwordEncoder.encode("password"), java.util.Set.of(UserRole.ADMIN));
+            // Criar usuário ADMIN
+            if (!userRepository.existsByEmail("admin@mail.com")) {
+                var admin = new AppUser("admin", "admin@mail.com", passwordEncoder.encode("password"),
+                        java.util.Set.of(UserRole.ADMIN));
                 userRepository.save(admin);
             }
 
-            // Garante que haja ao menos alguns alunos na tabela
-            if (alunoRepository.count() == 0) {
-                Aluno a1 = new Aluno("Aluno1", "aluno1@example.com");
-                a1.setCpf("00000000001");
-                Aluno a2 = new Aluno("Aluno2", "aluno2@example.com");
-                a2.setCpf("00000000002");
-                Aluno a3 = new Aluno("Aluno3", "aluno3@example.com");
-                a3.setCpf("00000000003");
-                alunoRepository.saveAll(java.util.List.of(a1, a2, a3));
+            // Criar usuário USER
+            if (!userRepository.existsByEmail("user@mail.com")) {
+                var user = new AppUser("user", "user@mail.com", passwordEncoder.encode("password"),
+                        java.util.Set.of(UserRole.USER));
+                userRepository.save(user);
             }
 
             // Se ainda não há turmas/disciplina/professores/inscrições, popular tudo
@@ -67,7 +64,9 @@ public class SeedData {
             a5.setCpf("55555555555");
             Aluno a6 = new Aluno("Felipe", "felipe@example.com");
             a6.setCpf("66666666666");
-            alunoRepository.saveAll(List.of(a1, a2, a3, a4, a5, a6));
+            Aluno a7 = new Aluno("Gabriel", "gabriel@example.com");
+            a7.setCpf("77777777777");
+            alunoRepository.saveAll(List.of(a1, a2, a3, a4, a5, a6, a7));
 
             Turma tA001 = new Turma();
             tA001.setAno(2025);

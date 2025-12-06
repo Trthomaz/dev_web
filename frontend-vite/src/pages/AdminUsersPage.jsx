@@ -7,6 +7,7 @@ import { getErrorMessage } from '../utils/errorMessage';
 
 const schema = z.object({
   username: z.string().min(3, 'Usuário mínimo 3 caracteres'),
+  email: z.string().email('Email inválido'),
   password: z.string().min(3, 'Senha mínima 3 caracteres'),
   role: z.enum(['USER', 'ADMIN']),
 });
@@ -14,8 +15,7 @@ const schema = z.object({
 const resolver = (schema) => async (values) => {
   try { const data = schema.parse(values); return { values: data, errors: {} }; }
   catch (err) {
-    const formErrors = {}; if (err.issues) for (const issue of err.issues) {
-        const p = issue.path?.[0]; if (p) formErrors[p] = { type: 'validation', message: issue.message }; }
+    const formErrors = {}; if (err.issues) for (const issue of err.issues) { const p = issue.path?.[0]; if (p) formErrors[p] = { type: 'validation', message: issue.message }; }
     return { values: {}, errors: formErrors };
   }
 };
@@ -23,16 +23,14 @@ const resolver = (schema) => async (values) => {
 export function AdminUsersPage() {
   const { post } = useApi();
   const createMut = useMutation({ mutationFn: post('/admin/users') });
-  const { register, handleSubmit,
-      reset, formState: { errors, isSubmitting } } = useForm({
-      resolver: resolver(schema), defaultValues: { role: 'USER' } });
+  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm({ resolver: resolver(schema), defaultValues: { role: 'USER' } });
   const [serverError, setServerError] = React.useState(null);
 
   const onSubmit = async (values) => {
     try {
       await createMut.mutateAsync(values);
       setServerError(null);
-      reset({ username: '', password: '', role: 'USER' });
+      reset({ username: '', email: '', password: '', role: 'USER' });
     } catch (e) {
       setServerError(getErrorMessage(e, { context: 'adminUsers' }));
     }
@@ -47,6 +45,11 @@ export function AdminUsersPage() {
           <label>Usuário</label>
           <input {...register('username')} />
           {errors.username && <span className='error'>{errors.username.message}</span>}
+        </div>
+        <div>
+          <label>Email</label>
+          <input type='email' {...register('email')} />
+          {errors.email && <span className='error'>{errors.email.message}</span>}
         </div>
         <div>
           <label>Senha</label>
